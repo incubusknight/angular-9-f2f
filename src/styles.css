@@ -1,0 +1,36 @@
+/* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+app-root {
+  padding: 10px;
+}
+
+button {
+  border-radius: 2px;
+  font-size: 0.75rem;
+  border-color: transparent;
+  color: #fff;
+}
+
+.company {
+  padding-bottom: 6px;
+}
+
+.company .company-controls button {
+  margin-right: 4px;
+}
+
+.footer {
+  margin-top: 12px;
+}
+
+.footer b {
+  display: block;
+}
+
+.is-danger {
+  background-color: #f14668;
+}
+
+.is-success {
+  background-color: #48c774;
+}
