@@ -2,14 +2,15 @@
   <h1>Counting Cars</h1>
 
   <!-- Start of Company -->
-  <div *ngFor="let company of companies">
-    <!-- Setting the (update) attribute is part of the Bonus round -->
-    <app-company [company]="company" (update)="refreshTotalCars()"></app-company>
+  <div class="company">
+    <b>Name: Company Name</b>
+    <br/>
+    <b>Cars: Number of Cars</b>
   </div>
   <!-- End of Company -->
 
   <div class="footer">
-    <b>Total Cars: {{ totalCars }}</b>
-    <button *ngIf="totalCars" class="is-danger" (click)="resetAllCompanyCars()">Reset</button>
+    <b>Total Cars: 0</b>
+    <button class="is-danger">Reset</button>
   </div>
 </div>

@@ -22,44 +22,13 @@
 
   7. (Bonus if there's time) Discuss how you might implement "+" and "-" buttons in the company component to increment and decrement the number of cars for that company.
  */
-
-import { Component, OnInit } from '@angular/core';
-import { Company } from './model/company';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  companies: Company[] = [];
-  // Also acceptable to use 'any' instead of using defined Company model, like: companies: any[] = [];
-  // However, it shows a great level of care when model class is used, or at least mentioned that
-  // 'he would do it like that, but in the interest of time'
-
-  totalCars: number = 0;
-
-  ngOnInit() {
-    this.companies = [
-      new Company('Ford', 4),
-      new Company('GM', 3),
-      new Company('Chrysler') // Company constructor defaults cars to 0 when not specified
-    ];
-    this.refreshTotalCars();
-  }
-  // Also acceptable for this test to use constructor (instead of ngOnInit) to inititialize state
-  // constructor() { ... same thing as ngOnInit ... }
-
-  refreshTotalCars() {
-    this.totalCars = this.companies
-      // Gets array of car counts
-      .map(company => company.cars)
-      // Reduces the number array to sum of all elements
-      .reduce((total, amt) => total + amt);
-  }
-
-  resetAllCompanyCars() {
-    this.companies.forEach(company => { company.cars = 0; });
-    this.refreshTotalCars();
-  }
+export class AppComponent {
+  title = 'angular-test';
 }
